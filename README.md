@@ -1,44 +1,52 @@
 
 # LYFE CHECK
 
-LYFE CHECK is a wellness and productivity web application developed as a Computer Science thesis project at New College of Florida.
-
-## About the Project
-
-LYFE CHECK is designed to help users manage their daily habits, track their moods, reflect through journaling, and monitor their personal progress in one centralized application.
+LYFE CHECK is a wellness and productivity web application designed to help users stay organized while tracking their daily well-being.
 
 ## Features
 
-- Dashboard / Home
-- Habit Tracker
-- Mood Tracker
-- Personal Journaling
-- Progress Analytics and Insights
-- Calendar System
-- Reminders and Notifications
-- AI Wellness Assistant (Planned)
+Home: Dashboard with daily tasks, mood tracking, journal, and calendar preview.
+
+Calendar: View and organize important dates.
+
+To-Do: Add, complete, and delete tasks.
+
+Journal: Save, search, favorite, and filter journal entries by date.
+
+Inspiration: Generate motivational quotes using a CSV dataset and the QuoteSlate API.
 
 ## Technologies
 
-- React
-- TypeScript
-- Vite
-- HTML
-- CSS
+React
+TypeScript
+Vite
+CSS
+React Router
+PapaParse
+Local Storage
+Fetch API
+
+## API
+
+Uses the QuoteSlate API to retrieve motivational quotes.
+https://github.com/musheer360/QuoteSlate?utm_source=chatgpt.com#getting-started
+
+## Dataset
+
+https://www.kaggle.com/datasets/avishantkumar/famous-quotes-dataset-100-inspirational-quotes
 
 ## Running the Application
 
-1. Clone the repository.
-2. Install dependencies:
+git clone https://github.com/SaniaThomas10/Assignment-2.git
+cd Assignment-2
+npm install
+npm run dev
 
-   npm install
+## Vercel URL
 
-3. Start the development server:
+https://lyfecheck-assignment2.vercel.app
 
-   npm run dev
-
-4. Open the localhost URL displayed in the terminal.
-
-## Project Status
-
-Currently in development.
+## Author
+Sania Thomas
+New College of Florida
+CEN 3352 – Front-End Web Design and Development
