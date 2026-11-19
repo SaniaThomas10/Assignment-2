@@ -1,0 +1,213 @@
+
+/* ==========================================
+   LYFE CHECK — DARK CHROME NAVIGATION
+   ========================================== */
+
+.navbar {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+
+  /* Semi-transparent navbar */
+  background: rgba(22, 15, 25, 0.45);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid var(--lyfe-border);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Top navigation section */
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 14px clamp(16px, 4vw, 55px);
+}
+
+/* LYFE CHECK chrome logo */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-logo img {
+  display: block;
+
+  width: 165px;
+  max-height: 85px;
+  height: auto;
+
+  object-fit: contain;
+  filter: none;
+
+  transition: transform 0.2s ease;
+}
+
+.navbar-logo:hover img {
+  transform: scale(1.04);
+}
+
+/* Right side buttons */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* AI Assistant button */
+
+.navbar-ai-button {
+  padding: 12px 21px;
+
+  border: 1px solid rgba(240, 165, 208, 0.3);
+  border-radius: 13px;
+
+  background: linear-gradient(
+    120deg,
+    rgba(213, 34, 120, 0.18),
+    rgba(137, 82, 245, 0.2)
+  );
+
+  color: var(--lyfe-soft-pink);
+
+  font-size: 13px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.navbar-ai-button:hover {
+  border-color: var(--lyfe-hot-pink);
+
+  background: rgba(213, 34, 120, 0.27);
+
+  transform: translateY(-1px);
+}
+
+/* Profile avatar */
+
+.navbar-profile {
+  display: block;
+
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  border: 2px solid rgba(240, 165, 208, 0.6);
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      #ef9ccf,
+      #ad3ca5 55%,
+      #5c367d
+    );
+
+  box-shadow:
+    0 0 16px rgba(213, 34, 120, 0.15);
+
+  transition: 0.2s ease;
+}
+
+.navbar-profile:hover,
+.navbar-profile.active {
+  box-shadow:
+    0 0 22px rgba(213, 34, 120, 0.45);
+
+  transform: scale(1.05);
+}
+
+/* Navigation links */
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: clamp(12px, 4vw, 55px);
+
+  padding: 0 20px 15px;
+}
+
+.navbar-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 13px;
+
+  border-bottom: 2px solid transparent;
+
+  color: var(--lyfe-muted);
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  transition: 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--lyfe-soft-pink);
+}
+
+.navbar-links a.active {
+  color: #ffb4df;
+  border-bottom-color: var(--lyfe-hot-pink);
+}
+
+/* ==========================================
+   RESPONSIVE NAVIGATION
+   ========================================== */
+
+@media (max-width: 650px) {
+
+  .navbar-top {
+    padding: 12px 16px;
+  }
+
+  .navbar-logo img {
+    width: 120px;
+  }
+
+  .navbar-actions {
+    gap: 9px;
+  }
+
+  .navbar-ai-button {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .navbar-profile {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navbar-links {
+    gap: 5px;
+    padding: 0 8px 10px;
+  }
+
+  .navbar-links a {
+    padding: 10px 9px;
+    font-size: 12px;
+  }
+}

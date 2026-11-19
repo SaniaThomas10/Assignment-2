@@ -1,0 +1,115 @@
+
+/* Main inspiration page */
+.inspiration-page {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+/* Page heading */
+.inspiration-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Page title */
+.inspiration-header h1 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 32px;
+}
+
+/* Page description */
+.inspiration-header p {
+  margin: 0;
+  color: #d5c4d2;
+  font-size: 15px;
+}
+
+/* Quote buttons */
+.inspiration-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+/* Shared button styles */
+.inspiration-buttons button {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* New random quote button */
+.inspiration-new-button {
+  border: none;
+  background-color: #d52278;
+  color: #ffffff;
+}
+
+/* New quote hover */
+.inspiration-new-button:hover {
+  background-color: #ad1b61;
+}
+
+/* More quotes button */
+.inspiration-more-button {
+  border: 2px solid #8952f5;
+  background-color: #ffffff;
+  color: #6233c1;
+}
+
+/* More quotes hover */
+.inspiration-more-button:hover {
+  background-color: #f3edff;
+}
+
+/* Disabled buttons */
+.inspiration-buttons button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Additional quotes section */
+.inspiration-results {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+/* Additional quotes heading */
+.inspiration-results h2 {
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+/* Loading and empty messages */
+.inspiration-results > p {
+  color: #e2d6e0;
+  font-size: 14px;
+}
+
+/* Error message */
+.inspiration-error {
+  color: #ff9eac;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Adjusts the layout for smaller screens */
+@media (max-width: 600px) {
+  .inspiration-page {
+    padding: 20px 12px 40px;
+  }
+
+  .inspiration-header h1 {
+    font-size: 27px;
+  }
+}
