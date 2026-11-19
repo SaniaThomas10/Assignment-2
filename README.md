@@ -37,10 +37,13 @@ https://www.kaggle.com/datasets/avishantkumar/famous-quotes-dataset-100-inspirat
 
 ## Running the Application
 
-git clone https://github.com/SaniaThomas10/Assignment-2.git
-cd Assignment-2
-npm install
-npm run dev
+1) git clone https://github.com/SaniaThomas10/Assignment-2.git
+
+2) cd Assignment-2
+
+3) npm install
+
+4) npm run dev
 
 ## Vercel URL
 
