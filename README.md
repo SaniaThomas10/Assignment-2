@@ -51,5 +51,7 @@ https://lyfecheck-assignment2.vercel.app
 
 ## Author
 Sania Thomas
+
 New College of Florida
+
 CEN 3352 – Front-End Web Design and Development
