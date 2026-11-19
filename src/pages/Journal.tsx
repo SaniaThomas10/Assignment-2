@@ -17,6 +17,7 @@ function Journal() {
   const [entries, setEntries] = useState<JournalEntry[]>([]);
   const [search, setSearch] = useState("");
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+  const [selectedDate, setSelectedDate] = useState("");
 
   // Load saved journal entries.
   function loadEntries() {
@@ -54,7 +55,7 @@ function Journal() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
   }
 
-  // Filter entries based on search and favorites.
+  // Filter entries by search, favorites, and date.
   const filteredEntries = entries.filter((entry) => {
     const matchesSearch =
       entry.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -63,7 +64,17 @@ function Journal() {
     const matchesFavorite =
       !showFavoritesOnly || entry.favorite;
 
-    return matchesSearch && matchesFavorite;
+    // Convert the saved date to the user's local date.
+    const entryDate = new Date(entry.date);
+    const year = entryDate.getFullYear();
+    const month = String(entryDate.getMonth() + 1).padStart(2, "0");
+    const day = String(entryDate.getDate()).padStart(2, "0");
+    const formattedDate = `${year}-${month}-${day}`;
+
+    const matchesDate =
+      selectedDate === "" || formattedDate === selectedDate;
+
+    return matchesSearch && matchesFavorite && matchesDate;
   });
 
   return (
@@ -97,6 +108,7 @@ function Journal() {
             <span>{entries.length} entries</span>
           </div>
 
+          {/* Journal search and filters */}
           <div className="journal-filters">
             <input
               type="search"
@@ -106,6 +118,30 @@ function Journal() {
               aria-label="Search journal entries"
             />
 
+            {/* Filter journal entries by date */}
+            <div className="journal-date-filter">
+              <label htmlFor="journal-date">
+                Filter by Date
+              </label>
+
+              <input
+                id="journal-date"
+                type="date"
+                value={selectedDate}
+                onChange={(event) => setSelectedDate(event.target.value)}
+              />
+
+              <button
+                type="button"
+                className="journal-clear-date"
+                onClick={() => setSelectedDate("")}
+                disabled={selectedDate === ""}
+              >
+                Clear Date
+              </button>
+            </div>
+
+            {/* Show favorite entries only */}
             <label className="journal-favorites-filter">
               <input
                 type="checkbox"
@@ -118,6 +154,7 @@ function Journal() {
             </label>
           </div>
 
+          {/* Message when no entries match */}
           {filteredEntries.length === 0 ? (
             <p className="journal-empty">
               {entries.length === 0

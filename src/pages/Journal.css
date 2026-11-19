@@ -215,3 +215,54 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Date filter section */
+.journal-date-filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Date filter label */
+.journal-date-filter label {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Date selection input */
+.journal-page .journal-date-filter input[type="date"] {
+  padding: 10px 14px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  -webkit-text-fill-color: #000000;
+  color-scheme: light;
+  font-size: 14px;
+}
+
+/* Clear date button */
+.journal-clear-date {
+  padding: 10px 14px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  background-color: #f3edff;
+  color: #6233c1;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Clear date button hover */
+.journal-clear-date:hover:not(:disabled) {
+  background-color: #e6d9ff;
+}
+
+/* Disabled clear date button */
+.journal-clear-date:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

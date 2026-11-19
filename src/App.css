@@ -1,8 +1,4 @@
 
-/* ==========================================
-   LYFE CHECK — APPLICATION LAYOUT
-   ========================================== */
-
 .app-layout {
   display: flex;
   flex-direction: column;
